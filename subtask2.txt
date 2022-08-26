@@ -1,0 +1,85 @@
+CS515 Fall21 Assignment 2 SubTask 2: Procedure Definitions and Applications
+===========================================================================
+
+In this subtask, you need to extend the previous week's interpreter to support user-defined procedure definitions and applications. Thus, you will have to create and extend environments while applying procedures. In a nutshell, you need to do the following:
+1. Create bindings on encountering 'define' expressions (including procedure objects i.e. lambda expressions).
+2. Create a new environment which extends the calling environment with bindings from formal parameters to the supplied arguments, and evaluate the body of the procedure in the new environment.
+
+EXAMPLES:
+---------
+
+Testcase 1:
+-----------
+I/P:
+    (define foo (lambda (x y) 
+    			 (+ x y)))
+O/P:
+    <no output>
+
+Testcase 2:
+-----------
+I/P:
+    (define foo (lambda (x y) 
+    			 (+ x y)))
+    (foo (+ 1 5) 3)
+O/P:
+    9
+
+Testcase 3:
+-----------
+I/P:
+    (define foo (lambda (x y) 
+    			 (+ x y)))
+    foo
+O/P:
+    <procedure: lambda (x y)>
+
+Testcase 4:
+-----------
+I/P:
+    (define foo (lambda (x y) 
+    			 (+ x y)))
+    (foo 1)
+O/P:
+    Number of supplied arguments to procedure 'foo' is less than expected.
+
+Testcase 5:
+-----------
+I/P:
+    (define foo (lambda (x y) 
+    			 (+ x y)))
+    (foo 1 2 3)
+O/P:
+    Number of supplied arguments to procedure 'foo' is more than expected.
+
+Testcase 6:
+-----------
+I/P:
+    (define foo (lambda (x) 
+    			 (lambda (y) 
+    			         (+ x y))))
+    (define proc (foo 1))
+    (proc 10)
+O/P:
+    11
+    
+Testcase 7:
+-----------
+I/P:
+    (define foo (lambda (x) 
+    			 (lambda (y) 
+    			         (+ x y))))
+    ((foo 1) 10)
+O/P:
+    11
+    
+   //////////////////////////////////// 
+    
+ (define foo (lambda (x) (+ x 8)))
+(define ( f1 x) (+ x 6))
+(define ( square x)(* x x))
+(define (s1 x y)(+ (square x)(square y)))
+(define (f a)(s1 (+ a 1)(+ a 2)))
+(define (foo2 x y)(+ x y ))
+
+(define foo1 (lambda (x y)(+ x y)))

@@ -1,0 +1,21 @@
+Steps to reproduce the setup from Lab 1
+=======================================
+
+1. Pass the regex/grammar jj file to JTB:
+    java -jar jtb.jar miniexpr.jj
+
+2. Generate parser using JavaCC:
+    javacc jtb.out.jj
+
+3. To view the grammar file in a browser, generate an html as follows:
+    jjdoc miniexpr.jj
+
+3. Edit any existing visitor (such as GJDepthFirst.java). Make sure the correct one is named in Main.java.
+
+4. Compile your code:
+    javac Main.java
+
+5. Test out the parser:
+    java Main < test
+
+6. Edit the jj file, recreate the parser, design new programming languages, enjoy!

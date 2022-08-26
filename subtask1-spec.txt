@@ -1,0 +1,50 @@
+CS515 Fall21 Assignment 2 SubTask 1: Evaluating Expressions
+===========================================================
+
+In this subtask, you need to evaluate expressions in MiniScheme, without any user-defined procedure definitions and applications. Thus, you can simply work with a global environment. In a nutshell, you need to do the following:
+1. Create bindings on encountering 'define' expressions.
+2. Look up values of defined variables.
+3. Evaluate arithmetic and logical expressions defined in the MiniScheme grammar.
+
+EXAMPLES:
+---------
+
+Testcase 1:
+-----------
+I/P:
+    (define a 10)
+O/P:
+    <no output>
+
+Testcase 2:
+-----------
+I/P:
+    (define a 10)
+    a
+O/P:
+    10
+
+Testcase 3:
+-----------
+I/P:
+    (+ (- 7 4)
+       (* 3 4))
+O/P:
+    15
+
+Testcase 4:
+-----------
+I/P:
+    (define a 10)
+    (define b 20)
+    (+ a b)
+O/P:
+    30
+
+Testcase 5:
+-----------
+I/P:
+    (define a 10)
+    (+ a b)
+O/P:
+    Symbol 'b' not found in the environment.
