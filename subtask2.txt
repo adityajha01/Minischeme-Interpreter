@@ -1,9 +1,4 @@
-CS515 Fall21 Assignment 2 SubTask 2: Procedure Definitions and Applications
-===========================================================================
 
-In this subtask, you need to extend the previous week's interpreter to support user-defined procedure definitions and applications. Thus, you will have to create and extend environments while applying procedures. In a nutshell, you need to do the following:
-1. Create bindings on encountering 'define' expressions (including procedure objects i.e. lambda expressions).
-2. Create a new environment which extends the calling environment with bindings from formal parameters to the supplied arguments, and evaluate the body of the procedure in the new environment.
 
 EXAMPLES:
 ---------
